@@ -296,7 +296,7 @@ ul.expanded > li, ol.expanded > li { margin-bottom: 10px; }
 .toolbar a { color: {{ settings.body_font_color }}; }
 .toolbar a:hover { color: {{ settings.body_font_color }}; opacity: 0.7; filter: alpha(opacity = 70); }
 .toolbar .search_box { background: transparent; height: 34px; width: 45px; padding: 0 10px 0 31px; border: none; vertical-align: middle; line-height: normal; font-family: {{ settings.header_font | remove: 'Google+' | replace: '+', ' ' }}; color: {{ settings.body_font_color }} !important; border-radius:3px; box-shadow: none; margin-top: -3px; transition: all 0.3s ease-in-out; font-size: 15px; }
-.toolbar .search_box:focus { background: rgba(0,0,0,0.05); width: 150px; }
+.toolbar .search_box:focus { background: rgba(254,0,0,0.05); width: 150px; }
 .toolbar #go { position: absolute; width: 14px; height: 14px; border: none; margin: 19px 0 0 4px; box-shadow: none; }
 @if (lightness({{ settings.shop_bg_color }}) < lightness(#999)) {
   .toolbar #go { 
@@ -849,6 +849,7 @@ ul.tabs { zoom: 1; }
 /*      SECTION 7      */
 /* =================== */
 .toolbar-wrapper {
+  height: 58px;
   width: 100% !important;
   padding: 0;
   background: #000;
@@ -856,13 +857,27 @@ ul.tabs { zoom: 1; }
 .toolbar {
   border: 0;
 }
+.toolbar a {
+  color: #fff;
+}
+.toolbar a:hover {
+  color: #fff;
+  opacity: 0.7;
+}
+
+.toolbar .search_box {
+  background: #fff;
+}
+.toolbar .search_box:focus {
+  background: #fff;
+}
+
 .logo {
   padding: 0;
 }
-.subbar {
-  height: 30px;
-  width: 100%;
-  background: url("pattern.png") repeat-x;
+.logo img {
+  max-width: 300px;
+  max-height: 200px;
 }
 
 nav {
@@ -875,35 +890,27 @@ nav.main {
 }
 
 body {
-  background: url("bg.png") repeat;
+  background: url({{'bg.png' | asset_url}}) repeat;
 }
 .footer-wrapper {
   padding-bottom: 100px;
 }
 
-.bottombar {
-  height: 100px;
+.subbar {
+  height: 58px;
+  width: 100%;
+  margin-top: -10px;
+  background: url({{'pattern.png' | asset_url}}) repeat-x;
+  background-size: 100% 58px;
+}
+.bottom_bar {
+  height: 108px;
   width: 100%;
   position: fixed;
   left: 0px;
   bottom: 0px;
-  background: url("bottom_bar.png") no-repeat;
-}
-.vertical_tag {
-  height: 322px;
-  width: 36px;
-  position: absolute;
-  left: 20px;
-  top: 100px;
-  background: url("vertical_tag.png") no-repeat;
-}
-.art_head {
-  height: 413px;
-  width: 246px;
-  position: absolute;
-  right: 0;
-  top: 60px;
-  background: url("art_head.png") no-repeat;
+  background: url({{'bottom_bar.png' | asset_url}}) no-repeat;
+  background-size: 100% 108px;
 }
 .flower_bird {
   height: 350px;
@@ -911,7 +918,8 @@ body {
   position: fixed;
   left: 0;
   bottom: 0;
-  background: url("flower_bird.png") no-repeat;
+  background: url({{'flower_bird.png' | asset_url}}) no-repeat;
+  background-size: 100%;
 }
 .brush {
   height: 94px;
@@ -919,11 +927,34 @@ body {
   position: fixed;
   right: 0;
   bottom: 0;
-  background: url("brush.png") no-repeat;
+  background: url({{'brush.png' | asset_url}}) no-repeat;
+  background-size: 100%;
+}
+
+.vertical_tag {
+  height: 318px;
+  width: 36px;
+  position: absolute;
+  left: 20px;
+  top: 120px;
+  background: url({{'vertical_tag.png' | asset_url}}) no-repeat;
+  background-size: 100%;
+}
+
+.art_head {
+  height: 413px;
+  width: 246px;
+  position: absolute;
+  right: 0;
+  top: 58px;
+  background: url({{'art_head.png' | asset_url}}) no-repeat;
+  background-size: 100%;
 }
 
 @media only screen and (max-width: 797px) {
   .artwork {display:none;}
+  .nav-logo {display:none;}
+  .subbar {display:none;}
 }
 
 
