@@ -61,7 +61,19 @@
   
   <!-- Begin toolbar -->
   <div class="toolbar-wrapper wrapper">
-    <div class="toolbar span12 clearfix">
+    <div class="toolbar span12 clearfix nav-table">
+        <div class="nav-logo">
+          <div class="logo">
+            {% if settings.use_logo %}
+            <h1><a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
+            {% if template == 'index' %}
+            <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+            {% endif %}
+            {% else %}
+            <h1><a href="/">{{ shop.name }}</a></h1>
+            {% endif %}
+          </div> 
+        </div> 
         <ul class="unstyled">
           {% if settings.display_search %}
           <li class="search-field fl">
@@ -82,6 +94,8 @@
         </ul>
     </div>
   </div>
+
+  <div class="subbar"></div>
   <!-- End toolbar -->
   
   <!-- Begin wrapper -->
@@ -117,20 +131,7 @@
       {% else %}
 
         <div class="row" id="header">
-          <div class="span12 border-bottom nav-table">
-            <div class="nav-logo">
-              <div class="logo">
-                {% if settings.use_logo %}
-                <h1><a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
-                {% if template == 'index' %}
-                <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
-                {% endif %}
-                {% else %}
-                <h1><a href="/">{{ shop.name }}</a></h1>
-                {% endif %}
-              </div> 
-            </div> 
-            
+          <div class="span12 nav-table">
             <div class="nav-links">
               <section id="nav">
                 <nav class="main">
@@ -172,6 +173,15 @@
     </div>
   </div>
   <!-- End wrapper -->
+
+<div class="artwork">
+  <div class="bottombar"></div>
+  <div class="vertical_tag"></div>
+  <div class="art_head"></div>
+  <div class="flower_bird"></div>
+  <div class="brush"></div>
+</div>
+
   
   <!-- Begin footer -->
   <div class="footer-wrapper wrapper">
