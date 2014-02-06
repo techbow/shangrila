@@ -83,6 +83,7 @@
             </form>
           </li>
           {% endif %}
+          {% include 'customer-links' %}
           <li id="cart-target" class="toolbar-cart {% if cart.item_count != 0 %}has-items{% endif %}">
             <a href="/cart" class="cart" title="Shopping Cart">
               <span class="icon-cart"></span>
@@ -90,7 +91,6 @@
               Cart
             </a>
           </li>         
-          {% include 'customer-links' %}
         </ul>
     </div>
   </div>
