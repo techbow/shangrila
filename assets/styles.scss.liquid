@@ -859,15 +859,20 @@ ul.tabs { zoom: 1; }
   border: 0;
 }
 .toolbar a {
-  color: #fff;
+  color: #d0d0d0;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  opacity: 1;
 }
 .toolbar li {
   line-height: 40px;
 }
 .toolbar a:hover {
+  cursor: pointer;
   color: #fff;
-  opacity: 0.7;
+  opacity: 1;
 }
+
 .logo {
   padding: 0;
 }
@@ -889,29 +894,49 @@ nav {
 
 nav.main {
   position: relative;
+  padding: 0 50px;
 }
+
 nav.main ul {
-  background: yellow;
+  background: url({{'border_middle.png' | asset_url}}) repeat-x;
+  background-size: 1px 50px;
 }
+
 .mainbefore {
   position: absolute;
   left: 0;
   width: 50px;
-  height: 51px;
-  background: red;
+  height: 50px;
+  background: url({{'border_left.png' | asset_url}}) no-repeat;
+  background-size: 100%;
 }
 .mainafter {
   position: absolute;
   right: 0;
   width: 50px;
-  height: 51px;
-  background: green;
+  height: 50px;
+  background: url({{'border_right.png' | asset_url}}) no-repeat;
+  background-size: 100%;
   margin-top: -50px;
 }
 
 body {
   background: url({{'bg.png' | asset_url}}) repeat;
 }
+.product {
+  -webkit-box-shadow: 0 0 4px rgba(7,8,8,.53);
+  -moz-box-shadow: 0 0 4px rgba(7,8,8,.53);
+  box-shadow: 0 0 4px rgba(7,8,8,.53);
+  background: url({{'product_bg.png' | asset_url}}) repeat;
+  background-size: 25px 25px;
+}
+.product .image {
+  padding: 10px 10px 0 10px;
+}
+.product .details {
+  padding:0 10px 10px 10px;
+}
+
 .footer-wrapper {
   padding-bottom: 100px;
 }
