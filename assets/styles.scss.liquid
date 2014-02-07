@@ -894,27 +894,27 @@ nav {
 
 nav.main {
   position: relative;
-  padding: 0 50px;
+  padding: 0 36px;
 }
 
 nav.main ul {
   background: url({{'border_middle.png' | asset_url}}) repeat-x;
-  background-size: 1px 50px;
+  background-size: 1px 36px;
 }
 
 .mainbefore {
   position: absolute;
   left: 0;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   background: url({{'border_left.png' | asset_url}}) no-repeat;
   background-size: 100%;
 }
 .mainafter {
   position: absolute;
   right: 0;
-  width: 50px;
-  height: 50px;
+  width: 36px;
+  height: 36px;
   background: url({{'border_right.png' | asset_url}}) no-repeat;
   background-size: 100%;
   margin-top: -50px;
@@ -995,6 +995,13 @@ body {
   opacity:0.9;
   background: url({{'art_head.png' | asset_url}}) no-repeat;
   background-size: 100%;
+}
+
+nav>ul>li>a {
+color: #111111;
+font-size: 14px;
+line-height: 36px;
+font-weight: 400;
 }
 
 @media only screen and (max-width: 797px) {
