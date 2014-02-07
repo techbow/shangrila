@@ -868,7 +868,6 @@ ul.tabs { zoom: 1; }
   color: #fff;
   opacity: 0.7;
 }
-
 .logo {
   padding: 0;
 }
@@ -876,14 +875,38 @@ ul.tabs { zoom: 1; }
   max-width: 180px;
   max-height: 120px;
 }
+.icon-cart { 
+  margin-top: 14px;
+  background-position: 0 -16px; 
+}
+#cart-count {
+  margin-top: 6px;
+}
 
 nav {
   float: none;
 }
 
 nav.main {
-  margin: 20px 50px;
-  border: 2px solid #000;
+  position: relative;
+}
+nav.main ul {
+  background: yellow;
+}
+.mainbefore {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 51px;
+  background: red;
+}
+.mainafter {
+  position: absolute;
+  right: 0;
+  width: 50px;
+  height: 51px;
+  background: green;
+  margin-top: -50px;
 }
 
 body {
@@ -894,24 +917,22 @@ body {
 }
 
 .subbar {
-  height: 58px;
+  height: 30px;
   width: 100%;
-  margin-top: -10px;
   background: url({{'pattern.png' | asset_url}}) repeat-x;
-  background-size: 100% 58px;
 }
 .bottom_bar {
-  height: 108px;
+  height: 72px;
   width: 100%;
   position: fixed;
   left: 0px;
   bottom: 0px;
   background: url({{'bottom_bar.png' | asset_url}}) no-repeat;
-  background-size: 100% 108px;
+  background-size: 100% 72px;
 }
 .flower_bird {
-  height: 350px;
-  width: 214px;
+  height: 234px;
+  width: 143px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -933,17 +954,17 @@ body {
   width: 36px;
   position: absolute;
   left: 20px;
-  top: 120px;
+  top: 100px;
   background: url({{'vertical_tag.png' | asset_url}}) no-repeat;
   background-size: 100%;
 }
 
 .art_head {
-  height: 413px;
-  width: 246px;
+  height: 275px;
+  width: 164px;
   position: absolute;
   right: 0;
-  top: 58px;
+  top: 40px;
   background: url({{'art_head.png' | asset_url}}) no-repeat;
   background-size: 100%;
 }
