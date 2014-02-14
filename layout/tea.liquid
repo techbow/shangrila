@@ -128,7 +128,7 @@
         <section id="nav" class="row p30">
           <div class="span12">
             <nav class="main">
-              {% include 'dropdown' %}
+              {% include 'dropdown.tea' %}
             </nav> <!-- /.main -->
             <nav class="mobile clearfix">
               {% include 'mobile-menu' %}
@@ -144,7 +144,7 @@
               <section id="nav">
                 <nav class="main">
                   <div class="mainbefore"></div>
-                  {% include 'dropdown' %}
+                  {% include 'dropdown-tea' %}
                   <div class="mainafter"></div>
                 </nav> 
                 <nav class="mobile clearfix">
@@ -187,9 +187,6 @@
 <div class="artwork">
   <div class="bottom_bar"></div>
   <div class="vertical_tag"></div>
-  <div class="art_head"></div>
-  <div class="flower_bird"></div>
-  <div class="brush"></div>
 </div>
 
   
@@ -290,5 +287,7 @@
     {{ 'jquery.zoom.js' | asset_url | script_tag }}
   {% endif %}
   {{ 'jquery.tweet.js' | asset_url | script_tag }}
-  {{ 'jquery.fancybox.js' | asset_url | script_tag }}ody>
+  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
+
+</body>
 </html>
